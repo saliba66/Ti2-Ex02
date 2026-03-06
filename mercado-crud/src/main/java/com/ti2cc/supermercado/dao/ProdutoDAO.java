@@ -46,7 +46,7 @@ public class ProdutoDAO {
     }
 
     public Integer inserir(Produto p) {
-        // Usa RETURNING para pegar o id gerado (se sua coluna id for SERIAL/BIGSERIAL)
+        //  pegar o id gerado
         String sql = "INSERT INTO produto (nome, marca, categoria, preco, estoque, ativo) " +
                      "VALUES (?,?,?,?,?,?) RETURNING id";
 
@@ -70,7 +70,7 @@ public class ProdutoDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null; // erro
+        return null; 
     }
 
     public boolean atualizar(Produto p) {
@@ -129,3 +129,4 @@ public class ProdutoDAO {
         return p;
     }
 }
+
