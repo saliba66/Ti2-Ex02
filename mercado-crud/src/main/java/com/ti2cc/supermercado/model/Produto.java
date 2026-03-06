@@ -3,7 +3,7 @@ package com.ti2cc.supermercado.model;
 import java.time.LocalDateTime;
 
 public class Produto {
-    private Integer id;        // pode ser null antes de inserir
+    private Integer id;        
     private String nome;
     private String marca;
     private String categoria;
@@ -60,3 +60,4 @@ public class Produto {
                 id, nome, marca, categoria, preco, estoque, ativo, criadoEm);
     }
 }
+
